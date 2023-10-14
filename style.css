@@ -1,0 +1,158 @@
+body{
+    height: 100%; 
+    margin: 0; 
+    background-color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (min-width: 992px){
+    .header {
+        float: none;
+    }
+}
+
+header{
+    background-color: #ffffff;
+    width: 100%;
+    padding: 30px 4% 10px; 
+    align-items: center;
+}
+
+h1{
+    margin: 30px; padding: 0; 
+    font-size: 60px;
+    font-family: "Paytone One";
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height:0.95em;
+    color: #FFF;
+    text-shadow: 0 0 0.2em rgba(0,0,0,1);
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.image{
+    text-align: center;
+    display: block;
+    
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* ぼかしから出現 */
+    animation: blurAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime{
+    from{
+        filter: blur(10px);
+        transform: scale(1.02); 
+    }
+
+    to{
+        filter: blur(0);
+        transform: scale(1); 
+    }
+}
+
+/* アニメーションスタートの遅延時間を決めるCSS*/
+.delay-time02{
+    animation-delay: 1s;
+}
+.delay-time04{
+    animation-delay: 1.5s;
+}
+.delay-time06{
+    animation-delay: 2s;
+}
+
+/**/
+.box{
+    opacity: 0; 
+}
+
+.fadeUp {
+    animation-name:fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+    }
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+.image img{
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 100%;
+}
+
+.bbs{
+    align-items: center;
+    display: block;
+    background: #0e546b;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    overflow:hidden;
+    width: 100%;
+    white-space:nowrap;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.bbs ul {
+    animation: flowing 20s linear infinite;
+    font-size: 20px;
+    transform:translateX(100%);
+    margin: 0;
+    padding: 0;
+}
+.bbs ul li{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+@keyframes flowing {
+    0% { transform:translateX(0); }
+    100% { transform:translateX(-100%); }
+}
+
+
+
+.source{
+    background-color: #ffffff;
+    display: block;
+}
+
+.source a{
+    text-align: center;
+    display: block;
+}
+
+
+#footer{
+    background-color: #ffffff;
+    font-size: 0.5rem;
+    padding: 10px 0; 
+    text-align: center;
+}
+
